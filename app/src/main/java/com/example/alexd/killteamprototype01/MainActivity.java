@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
         backgroundMusic.stop();
         Intent myIntent = new Intent(getBaseContext(), InfoInput.class);
         startActivity(myIntent);
+
     }
 
     @Override
