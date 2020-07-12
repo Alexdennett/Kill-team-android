@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
+    tools:context="com.example.alexd.killteamprototype01.ModelDisplay">
+
+    <Button
+        android:id="@+id/decreaseWounds"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="95dp"
+        android:background="@android:color/holo_red_dark"
+        android:fontFamily="@font/aldrich"
+        android:gravity="center"
+        android:onClick="decreaseModelWounds"
+        android:text="-"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/woundCounter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/modelView" />
+
+    <TextView
+        android:id="@+id/nameView"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="35dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/aldrich"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/modelView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/modelView"
+        android:layout_width="300dp"
+        android:layout_height="375dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameView"
+        app:srcCompat="@drawable/spacemarine" />
+
+    <Button
+        android:id="@+id/increaseWounds"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="94dp"
+        android:background="@android:color/holo_green_dark"
+        android:fontFamily="@font/aldrich"
+        android:gravity="center"
+        android:onClick="increaseModelWounds"
+        android:text="+"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/woundCounter"
+        app:layout_constraintTop_toBottomOf="@+id/modelView" />
+
+    <TextView
+        android:id="@+id/woundCounter"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/aldrich"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@android:color/black"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/increaseWounds"
+        app:layout_constraintStart_toEndOf="@+id/decreaseWounds"
+        app:layout_constraintTop_toBottomOf="@+id/modelView" />
+
+    <Button
+        android:id="@+id/shakenButton"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="29dp"
+        android:background="@drawable/smallshakenlogo"
+        android:onClick="setModelToShaken"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/increaseWounds"
+        app:layout_constraintTop_toBottomOf="@+id/modelView" />
+
+    <ImageView
+        android:id="@+id/fleshWoundMarker"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="30dp"
+        android:onClick="fleshWound"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/decreaseWounds"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/modelView"
+        app:srcCompat="@drawable/greyfleshwound" />
+
+</android.support.constraint.ConstraintLayout>
